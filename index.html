@@ -19,10 +19,34 @@
     <article>
       <p>
         Following command will remove the last commit and new changes will need to be
-        staged and committed.
+        staged and committed. reset will undo the history and rewrite it. best used for
+        local working files.
       </p>
       <p>
         git reset HEAD~
+      </p>
+      <p>
+        git reset <filename> will also remove from the stage backing in the
+          working directory.
+      </p>
+    </article>
+
+    <article>
+      git revert <hash#> will undo the most recent commit and create a new
+        commit, the bad commit stays in the history.
+    </article>
+
+    <article>
+      <p>
+        git commit --amend -m "can update the previous commit message and files."
+      </p>
+      <p>
+        git commit --amend --no-edit will just add staged files to the previous commit.
+      </p>
+      <p>
+        git commit --amend --force-with-lease will not overwrite commits on a remote.
+        others have made commits to the remote and pushing an amended commit could
+        cause major issues.
       </p>
     </article>
   </main>
