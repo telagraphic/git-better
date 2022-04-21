@@ -36,6 +36,20 @@
       git revert <hash#> will undo the most recent commit and create a new
         commit, the bad commit stays in the history.
     </article>
+
+    <article>
+      <p>
+        git commit --amend -m "can update the previous commit message and files."
+      </p>
+      <p>
+        git commit --amend --no-edit will just add staged files to the previous commit.
+      </p>
+      <p>
+        git commit --amend --force-with-lease will not overwrite commits on a remote.
+        others have made commits to the remote and pushing an amended commit could
+        cause major issues.
+      </p>
+    </article>
   </main>
 
 
